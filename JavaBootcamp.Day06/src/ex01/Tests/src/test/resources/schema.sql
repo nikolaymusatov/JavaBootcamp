@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS test (
+    id INT NOT NULL,
+    name VARCHAR NOT NULL,
+    price INT NOT NULL,
+    PRIMARY KEY(id)
+);
