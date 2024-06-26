@@ -1,0 +1,3 @@
+Design pattern describes a frequently recurring application design problem and a universal way of solving it.
+In other words, to a programmer, a design pattern is nothing more than a building block, an elementary unit that is implemented when a typical subtask occurs within a project.
+Design patterns are usually divided into three groups: creative, structural and behavioural. See Resources for more information about design patterns.

@@ -1,0 +1,1 @@
+Design patterns are usually divided into three groups: creational, structural and behavioral patterns. In reality, there are a huge number of different patterns and here are just the main ones that have become established in the developers’ community. They are also called the patterns of Gang of Four.
