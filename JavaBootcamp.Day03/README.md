@@ -30,7 +30,7 @@ The truth is born in a dispute—let's assume that each thread provides its own 
 
 You need to implement the operation of two threads. Each of them must display its answer a few times, for example, 50:
 ```
-$ java Program --count=50
+$ java Program 50
 Egg
 Hen
 Hen
@@ -40,7 +40,7 @@ Egg
 ```
 In this case, the egg thread wins. However, the program also contains main thread. Inside the thread,  public static void main(String args[]) method is executed. We need this thread to display all its responses at the end of program execution. Thus, the ultimate variant is as follows:
 ```
-$ java Program --count=50
+$ java Program 50
 Egg
 Hen
 Hen
@@ -69,7 +69,7 @@ Keywords: |	Synchronized
 Let's orchestrate the argument. Now, each thread can provide its answer only after another thread has done so. Let's assume that the egg thread always answers first.
 
 ```
-$ java Program --count=50
+$ java Program 50
 Egg
 Hen
 Egg
@@ -105,7 +105,7 @@ Maximum number of array elements is 2,000,000. Maximum number of threads is no g
 
 Example of the program operation (each array element equals 1):
 ```
-$ java Program --arraySize=13 --threadsCount=3
+$ java Program 13 3
 Sum: 13
 Thread 1: from 0 to 4 sum is 5
 Thread 2: from 5 to 9 sum is 5
@@ -144,7 +144,7 @@ We need to create files_urls.txt file (file name shall be explicitly specified i
 ```
 Example of the program operation:
 ```
-$ java Program.java --threadsCount=3
+$ java Program.java 3
 Thread-1 start download file number 1
 Thread-2 start download file number 2
 Thread-1 finish download file number 1
