@@ -24,7 +24,7 @@ JUnit and Mockito. The basics of module and integration testing.
 Reflection. Development of custom frameworks that use the reflection mechanism.
 ### JavaBootcamp.Day08
 Spring. The basics of the Spring framework.
-### JavaBootcamp.Day09
+### JavaBootcamp.Day09 - in developing
 Sockets. Implementation of the basic client/server application based on Java Sockets API.
-### JavaBootcamp.Team01
+### JavaBootcamp.Team01 - in developing
 Implementation of an actual client/server game with a full-scale interface.
