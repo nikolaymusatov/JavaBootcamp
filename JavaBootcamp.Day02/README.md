@@ -134,13 +134,13 @@ Let's assume there is MAIN folder on disk C:/ (or in the root directory, dependi
 
 Example of the program operation for MAIN directory:
 ```
-$ java Program --current-folder=C:/MAIN
-C:/MAIN
+$ java Program /MAIN
+/MAIN
 -> ls
 folder1 60 KB
 folder2 90 KB
 -> cd folder1
-C:/MAIN/folder1
+/MAIN/folder1
 -> ls
 image.jpg 10 KB
 animation.gif 50 KB
@@ -152,7 +152,7 @@ animation.gif 50 KB
 -> ls
 image2.jpg 10 KB
 -> cd ../folder2
-C:/MAIN/folder2
+/MAIN/folder2
 -> ls
 text.txt 10 KB
 Program.java 80 KB
