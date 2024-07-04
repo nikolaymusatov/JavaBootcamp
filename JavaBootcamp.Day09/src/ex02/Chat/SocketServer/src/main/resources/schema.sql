@@ -1,0 +1,18 @@
+CREATE TABLE day09ex02_users(
+  id SERIAL PRIMARY KEY,
+  login VARCHAR,
+  password VARCHAR,
+  authorized boolean
+);
+CREATE TABLE day09ex02_chatrooms(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  owner BIGINT REFERENCES day09ex02_users (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE day09ex02_messages (
+  id SERIAL PRIMARY KEY,
+  author BIGINT REFERENCES day09ex02_users (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  chatroom BIGINT REFERENCES day09ex02_chatrooms (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  text text,
+  date TIMESTAMP
+);
