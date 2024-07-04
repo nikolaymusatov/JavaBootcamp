@@ -6,57 +6,13 @@
 
 # Contents
 1. [Chapter I](#chapter-i) \
-    1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-    2.1. [General Rules](#general-rules)
-3. [Chapter III](#chapter-iii) \
     3.1. [Exercise 00 – Registration](#exercise-00-registration)
-4. [Chapter IV](#chapter-iv) \
+2. [Chapter II](#chapter-ii) \
     4.1. [Exercise 01 – Messaging](#exercise-01-messaging)
-5. [Chapter V](#chapter-v) \
+3. [Chapter III](#chapter-iii) \
     5.1. [Exercise 02 – Rooms](#exercise-02-rooms)
 
 # Chapter I
-### Preamble
-The client/server interaction is the backbone of up-to-date systems. Server performs a large volume of business logic and information storage. As a result, the client application load is significantly reduced.
-
-Dividing the logic into server and client components enables to flexibly build a general system architecture if server and client implementations are maximally independent.
-
-Client and server communicate via numerous protocols described in OSI network model as different layers:
-
-Layer |	Example
----|---
-7.<font> Application |	HTTP
-6.<font> Representation |	ASCII
-5.<font> Session |	RPC
-4.<font> Transport |	TCP, UDP
-3.<font> Network |	IPv4
-2.<font> Channel |	Ethernet, DSL
-1.<font> Physical |	USB, "twisted pair"
-
-![A Joke](misc/images/joke.png)
-
-# Chapter II
-### General Rules
-- Use this page as the only reference. Do not listen to any rumors and speculations about how to prepare your solution.
-- Now there is only one Java version for you, 1.8. Make sure that compiler and interpreter of this version are installed on your machine.
-- You can use IDE to write and debug the source code.
-- The code is read more often than written. Read carefully the [document](https://www.oracle.com/technetwork/java/codeconventions-150003.pdf) where code formatting rules are given. When performing each task, make sure you follow the generally accepted [Oracle standards](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html).
-
-- Comments are not allowed in the source code of your solution. They make it difficult to read the code.
-- Pay attention to the permissions of your files and directories.
-- To be assessed, your solution must be in your GIT repository.
-- Your solutions will be evaluated by your bootcamp mates.
-- You should not leave in your "src" directory any other file than those explicitly specified by the exercise instructions. It is recommended that you modify your .gitignore to avoid accidents.
-- When you need to get precise output in your programs, it is forbidden to display a precalculated output instead of performing the exercise correctly.
-- Have a question? Ask your neighbor on the right. Otherwise, try with your neighbor on the left.
-- Your reference manual: mates / Internet / Google. And one more thing. There's an answer to any question you may have on Stackoverflow. Learn how to ask questions correctly.
-- Read the examples carefully. They may require things that are not otherwise specified in the subject.
-- Use System.out for output.
-- And may the Force be with you!
-- Never leave that till tomorrow which you can do today ;)
-
-# Chapter III
 ### Exercise 00 – Registration
 
 Exercise 00: Registration ||
@@ -125,7 +81,7 @@ Server application architecture (client application is at the developer's discre
                     - db.properties
         - pom.xml
 
-# Chapter IV
+# Chapter II
 ### Exercise 01 – Messaging
 
 Exercise 01: Messaging ||
@@ -164,7 +120,7 @@ Each message shall be saved in the database and contain the following informatio
 **Note**:
 - For comprehensive testing, several jar files of the client application shall be run.
 
-# Chapter V
+# Chapter III
 ### Exercise 02 – Rooms
 
 Exercise 02: Rooms ||
@@ -211,13 +167,5 @@ Marsel: Hello!
 You have left the chat.
 ```
 
-Using JSON format for message exchange will be a special task for you. In this way, each user command or message must be transferred to the server (and received from the server) in the form of a JSON line.
-
-For example, a command for sending a message may look as follows (specific contents of messages are at the discretion of a developer):
-```JSON
-{
-  "message" : "Hello!",
-  "fromId" : 4,
-  "roomId": 10
-}
-```
+#### Brief explanation
+The assignment for this exercise tells you to use JdbcTemplate to access the database. However, this implementation is not very convenient, since unwanted dependencies appear inside the Repository classes, and it is also necessary to write your own mappers (For example, to get the Message entity from the database, which contains the User and Chatroom entities). Therefore, I decided to use Hibernate to solve this task.
